@@ -8,24 +8,24 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-.pict{
+.pict {
   width: 50%;
   height: 50%;
 }
 
-.gam{
+.gam {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
 
-.bar{
+.bar {
   width: 50%;
   height: auto;
   margin-left: 160px;
 }
 
-.jar{
+.jar {
   margin-top: 80px;
   margin-bottom: 50px;
 }
