@@ -1,0 +1,422 @@
+CRITICAL - 2023-01-17 08:15:20 --> Undefined property: App\Controllers\Category::$CategoriesModel
+in APPPATH\Controllers\Category.php on line 13.
+ 1 APPPATH\Controllers\Category.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Category::$CategoriesModel', 'APPPATH\\Controllers\\Category.php', 13, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Category->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 08:15:22 --> Undefined property: App\Controllers\Category::$CategoriesModel
+in APPPATH\Controllers\Category.php on line 13.
+ 1 APPPATH\Controllers\Category.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Category::$CategoriesModel', 'APPPATH\\Controllers\\Category.php', 13, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Category->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Category))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:34:44 --> Invalid file: admin.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Article.php(21): view()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Article->index()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2023-01-17 19:47:03 --> Unknown column 'id_user' in 'where clause'
+CRITICAL - 2023-01-17 19:47:03 --> Unknown column 'id_user' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(550): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 SYSTEMPATH/BaseModel.php(1084): CodeIgniter\Model->countAllResults()
+ 7 APPPATH/Controllers/Article.php(16): CodeIgniter\BaseModel->paginate()
+ 8 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Article->index()
+ 9 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 20:19:31 --> Invalid file: article-review.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Article.php(152): view()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Article->review()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 20:21:09 --> Invalid file: article-review.php
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Article.php(152): view()
+ 4 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Article->review()
+ 5 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 20:25:39 --> syntax error, unexpected token ")"
+in APPPATH/Views/layouts/admin.php on line 157.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Community.php(16): view()
+ 5 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Community->index()
+ 6 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 20:25:41 --> syntax error, unexpected token ")"
+in APPPATH/Views/layouts/admin.php on line 157.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Article.php(152): view()
+ 5 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Article->review()
+ 6 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 21:02:16 --> Request URI segment is out of range: 3
+in SYSTEMPATH/HTTP/URI.php on line 529.
+ 1 SYSTEMPATH/HTTP/URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange()
+ 2 SYSTEMPATH/Helpers/url_helper.php(111): CodeIgniter\HTTP\URI->getSegment()
+ 3 APPPATH/Views/layouts/admin.php(157): get_url()
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/layouts/admin.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render()
+ 7 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 8 APPPATH/Controllers/Admin.php(21): view()
+ 9 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 21:02:30 --> Request URI segment is out of range: 3
+in SYSTEMPATH/HTTP/URI.php on line 529.
+ 1 SYSTEMPATH/HTTP/URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange()
+ 2 SYSTEMPATH/Helpers/url_helper.php(111): CodeIgniter\HTTP\URI->getSegment()
+ 3 APPPATH/Views/layouts/admin.php(157): get_url()
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/layouts/admin.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render()
+ 7 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 8 APPPATH/Controllers/Admin.php(21): view()
+ 9 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 21:03:00 --> Request URI segment is out of range: 3
+in SYSTEMPATH/HTTP/URI.php on line 529.
+ 1 SYSTEMPATH/HTTP/URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange()
+ 2 SYSTEMPATH/Helpers/url_helper.php(111): CodeIgniter\HTTP\URI->getSegment()
+ 3 APPPATH/Views/layouts/admin.php(157): get_url()
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/layouts/admin.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render()
+ 7 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 8 APPPATH/Controllers/Admin.php(21): view()
+ 9 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 21:03:27 --> Request URI segment is out of range: 3
+in SYSTEMPATH/HTTP/URI.php on line 529.
+ 1 SYSTEMPATH/HTTP/URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange()
+ 2 SYSTEMPATH/Helpers/url_helper.php(111): CodeIgniter\HTTP\URI->getSegment()
+ 3 APPPATH/Views/layouts/admin.php(157): get_url()
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/layouts/admin.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render()
+ 7 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 8 APPPATH/Controllers/Admin.php(21): view()
+ 9 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 21:03:59 --> Request URI segment is out of range: 3
+in SYSTEMPATH/HTTP/URI.php on line 529.
+ 1 SYSTEMPATH/HTTP/URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange()
+ 2 SYSTEMPATH/Helpers/url_helper.php(111): CodeIgniter\HTTP\URI->getSegment()
+ 3 APPPATH/Views/layouts/admin.php(157): get_url()
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/layouts/admin.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render()
+ 7 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 8 APPPATH/Controllers/Admin.php(21): view()
+ 9 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 21:04:38 --> Request URI segment is out of range: 3
+in SYSTEMPATH/HTTP/URI.php on line 529.
+ 1 SYSTEMPATH/HTTP/URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange()
+ 2 SYSTEMPATH/Helpers/url_helper.php(111): CodeIgniter\HTTP\URI->getSegment()
+ 3 APPPATH/Views/layouts/admin.php(157): get_url()
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/layouts/admin.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render()
+ 7 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 8 APPPATH/Controllers/Admin.php(21): view()
+ 9 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 21:05:15 --> Request URI segment is out of range: 3
+in SYSTEMPATH/HTTP/URI.php on line 529.
+ 1 SYSTEMPATH/HTTP/URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange()
+ 2 SYSTEMPATH/Helpers/url_helper.php(111): CodeIgniter\HTTP\URI->getSegment()
+ 3 APPPATH/Views/layouts/admin.php(157): get_url()
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/layouts/admin.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render()
+ 7 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 8 APPPATH/Controllers/Admin.php(21): view()
+ 9 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 21:06:04 --> Request URI segment is out of range: 3
+in SYSTEMPATH/HTTP/URI.php on line 529.
+ 1 SYSTEMPATH/HTTP/URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange()
+ 2 SYSTEMPATH/Helpers/url_helper.php(111): CodeIgniter\HTTP\URI->getSegment()
+ 3 APPPATH/Views/layouts/admin.php(157): get_url()
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/layouts/admin.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render()
+ 7 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 8 APPPATH/Controllers/Admin.php(21): view()
+ 9 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 21:06:49 --> Request URI segment is out of range: 3
+in SYSTEMPATH/HTTP/URI.php on line 529.
+ 1 SYSTEMPATH/HTTP/URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange()
+ 2 SYSTEMPATH/Helpers/url_helper.php(111): CodeIgniter\HTTP\URI->getSegment()
+ 3 APPPATH/Views/layouts/admin.php(157): get_url()
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/layouts/admin.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render()
+ 7 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 8 APPPATH/Controllers/Admin.php(21): view()
+ 9 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 21:06:50 --> Request URI segment is out of range: 3
+in SYSTEMPATH/HTTP/URI.php on line 529.
+ 1 SYSTEMPATH/HTTP/URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange()
+ 2 SYSTEMPATH/Helpers/url_helper.php(111): CodeIgniter\HTTP\URI->getSegment()
+ 3 APPPATH/Views/layouts/admin.php(157): get_url()
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/layouts/admin.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->render()
+ 7 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 8 APPPATH/Controllers/Admin.php(21): view()
+ 9 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+12 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2023-01-17 21:32:59 --> Error connecting to the database: Connection refused
+CRITICAL - 2023-01-17 21:32:59 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 416.
+ 1 SYSTEMPATH/Database/BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Admin.php(16): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2023-01-17 21:33:14 --> Error connecting to the database: Connection refused
+CRITICAL - 2023-01-17 21:33:14 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 416.
+ 1 SYSTEMPATH/Database/BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Admin.php(16): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2023-01-17 21:33:18 --> Error connecting to the database: Connection refused
+CRITICAL - 2023-01-17 21:33:18 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 416.
+ 1 SYSTEMPATH/Database/BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Admin.php(16): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2023-01-17 21:33:19 --> Error connecting to the database: Connection refused
+CRITICAL - 2023-01-17 21:33:19 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 416.
+ 1 SYSTEMPATH/Database/BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Admin.php(16): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2023-01-17 21:33:24 --> Error connecting to the database: Connection refused
+CRITICAL - 2023-01-17 21:33:24 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 416.
+ 1 SYSTEMPATH/Database/BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Admin.php(16): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2023-01-17 21:33:26 --> Error connecting to the database: Connection refused
+CRITICAL - 2023-01-17 21:33:26 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 416.
+ 1 SYSTEMPATH/Database/BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Admin.php(16): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2023-01-17 21:33:27 --> Error connecting to the database: Connection refused
+CRITICAL - 2023-01-17 21:33:27 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 416.
+ 1 SYSTEMPATH/Database/BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Admin.php(16): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2023-01-17 21:33:28 --> Error connecting to the database: Connection refused
+CRITICAL - 2023-01-17 21:33:28 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 416.
+ 1 SYSTEMPATH/Database/BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Admin.php(16): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2023-01-17 21:33:29 --> Error connecting to the database: Connection refused
+CRITICAL - 2023-01-17 21:33:29 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 416.
+ 1 SYSTEMPATH/Database/BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Admin.php(16): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2023-01-17 21:33:33 --> Error connecting to the database: Connection refused
+CRITICAL - 2023-01-17 21:33:33 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 416.
+ 1 SYSTEMPATH/Database/BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Admin.php(16): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2023-01-17 21:33:34 --> Error connecting to the database: Connection refused
+CRITICAL - 2023-01-17 21:33:34 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 416.
+ 1 SYSTEMPATH/Database/BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Admin.php(16): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2023-01-17 21:33:36 --> Error connecting to the database: Connection refused
+CRITICAL - 2023-01-17 21:33:36 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 416.
+ 1 SYSTEMPATH/Database/BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind()
+ 5 APPPATH/Controllers/Admin.php(16): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Admin->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 21:34:30 --> Undefined variable $user
+in APPPATH/Views/admin/article.php on line 23.
+ 1 APPPATH/Views/admin/article.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/admin/article.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Article.php(21): view()
+ 6 SYSTEMPATH/CodeIgniter.php(896): App\Controllers\Article->index()
+ 7 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 22:07:18 --> unlink(img/1674011931_70dd96fcec5437c85922.jpeg): No such file or directory
+in APPPATH\Controllers\Article.php on line 84.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(img/1674011931_70dd96fcec5437c85922.jpeg): No such file or directory', 'APPPATH\\Controllers\\Article.php', 84, [...])
+ 2 APPPATH\Controllers\Article.php(84): unlink('img/1674011931_70dd96fcec5437c85922.jpeg')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Article->delete()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

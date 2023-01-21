@@ -1,0 +1,55 @@
+ERROR - 2022-12-01 00:15:56 --> Unknown column 'slug' in 'where clause'
+CRITICAL - 2022-12-01 00:15:56 --> Unknown column 'slug' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `slug` = \'Cara mudah mempercepat windows 11\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `slug` = \'Cara mudah mempercepat windows 11\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `slug` = \'Cara mudah mempercepat windows 11\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `slug` = :slug:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Home.php(65): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->detail('Cara mudah mempercepat windows 11')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-01 00:17:10 --> Undefined index: slug
+in APPPATH\Views\article.php on line 53.
+ 1 APPPATH\Views\article.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: slug', 'APPPATH\\Views\\article.php', 53, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\article.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('article', [], true)
+ 5 APPPATH\Controllers\Home.php(58): view('article', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->article()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-01 00:25:34 --> Undefined index: slug
+in APPPATH\Views\article.php on line 53.
+ 1 APPPATH\Views\article.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: slug', 'APPPATH\\Views\\article.php', 53, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\article.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('article', [], true)
+ 5 APPPATH\Controllers\Home.php(58): view('article', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->article()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

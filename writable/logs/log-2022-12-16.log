@@ -1,0 +1,21 @@
+CRITICAL - 2022-12-16 02:41:46 --> Undefined variable: article
+in APPPATH\Views\article.php on line 42.
+ 1 APPPATH\Views\article.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: article', 'APPPATH\\Views\\article.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\article.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('article', [], true)
+ 5 APPPATH\Controllers\Home.php(62): view('article', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->article()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-16 07:47:15 --> unlink(img/1671198363_dba85d39d4f99ba56df4.png): No such file or directory
+in APPPATH\Controllers\Community.php on line 85.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(img/1671198363_dba85d39d4f99ba56df4.png): No such file or directory', 'APPPATH\\Controllers\\Community.php', 85, [...])
+ 2 APPPATH\Controllers\Community.php(85): unlink('img/1671198363_dba85d39d4f99ba56df4.png')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Community->update()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Community))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
