@@ -8,5 +8,5 @@ class ArticlesModel extends Model
 {
     protected $table      = 'articles';
     protected $primaryKey = 'id_articles';
-    protected $allowedFields = ['title', 'description', 'thumbnail', 'date', 'slug', 'id_categories', 'id_users', 'status'];
+    protected $allowedFields = ['title', 'description', 'thumbnail', 'date', 'slug', 'id_categories', 'id_users', 'status', 'notification'];
 }

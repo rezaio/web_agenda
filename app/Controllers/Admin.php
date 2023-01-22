@@ -22,6 +22,30 @@ class Admin extends BaseController
         return view('admin/home',$data);
     }
 
+    public function notifItem()
+    {
+        $article       = new ArticlesModel();
+        $data = [
+            'data' => $article->where('notification', 1)->findAll(),
+        ];
+        echo json_encode($data);
+    }
+
+    public function notifCount()
+    {
+        $article       = new ArticlesModel();
+        $data = $article->where('notification', 1)->countAllResults();
+        echo ($data);
+    }
+
+    public function notifStatusChange()
+    {
+        if ($this->request->getPost('status')) {
+            $article = new ArticlesModel();
+            $article->set('notification', 2)->where('notification', 1)->update();
+        }
+    }
+
     public function statistic()
     {
         function bulan($a) {

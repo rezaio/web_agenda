@@ -50,6 +50,10 @@ $routes->get('/calendar', 'Home::calendar', ['as' => 'home-calendar']);
 $routes->get('/community', 'Home::community', ['as' => 'home-community']);
 
 $routes->get('/admin', 'Admin::index', ['as' => 'home', 'filter' => 'auth']);
+// nambah notif
+$routes->get('/admin/notification-item', 'Admin::notifItem');
+$routes->get('/admin/notification-count', 'Admin::notifCount', ['as' => 'notif-count', 'filter' => 'auth']);
+$routes->post('/admin/notification-status-change', 'Admin::notifStatusChange', ['as' => 'notif-status-change', 'filter' => 'auth']);
 $routes->get('/admin/statistic', 'Admin::statistic', ['as' => 'statistic-lab']);
 
 // Setting Section

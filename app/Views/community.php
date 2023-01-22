@@ -57,7 +57,7 @@
                 <?= $communitys['description']; ?>
               </p>
             </div>
-            <a class="btn btn-primary" href="https://kemahasiswaan.polinela.ac.id/">Kunjungi Website -></a>
+            <a class="btn btn-primary" href="<?= $communitys['link']; ?>">Kunjungi Website -></a>
             </div>
           </div>
           <!-- End col-->

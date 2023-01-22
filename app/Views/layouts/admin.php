@@ -114,6 +114,47 @@
                 </div>
             </div>
         </div>
+
+        <!-- nontifikasi -->
+        <div id="main">
+            <header class="mb-3">
+                <nav class="navbar navbar-expand navbar-light navbar-top p-0">
+                    <div class="container-fluid ps-0 pe-0">
+                        <a href="#" class="burger-btn d-block">
+                            <i class="bi bi-justify fs-3"></i>
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-lg-0">
+                                <li class="nav-item dropdown me-3">
+                                    <a onclick="notificationRead();" class="nav-link active" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                        <span id="notification-badge" style="left: 80%; top: 15%; display: none;" class="position-absolute translate-middle badge rounded-pill bg-danger">
+                                            99+
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                        <div style="width: 50px; height: 50px;" id="bg-notif" class="d-flex bg-white border border-light rounded-circle">
+                                            <i id="notification" class="bi-bell-fill m-auto fs-4 text-gray-600"></i>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end notification-dropdown" aria-labelledby="dropdownMenuButton">
+                                        <li class="dropdown-header">
+                                            <h6>Notifications</h6>
+                                        </li>
+                                        <div class="notifitem">
+
+                                        </div>
+                                        <!-- <li>
+                                            <p class="text-center py-2 mb-0">
+                                                <a href="#">See all notification</a>
+                                            </p>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                            </ul>
+
         <div id="main">
             <header class="mb-3">
                 <a href="#" class="burger-btn d-block d-xl-none">
@@ -147,23 +188,29 @@
     <!-- <script src="<?= base_url(); ?>/assets/js/extensions/sweetalert2.js"></script> -->
     <script src="<?= base_url(); ?>/assets/js/extensions/sweetalert2.min.js"></script>
     <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
-    <script> 
+    <script>
+
+        var count = $.ajax({
+            url: "<?= base_url(); ?>/admin/notification-count",
+            async: false,
+            dataType: 'json'
+        }).responseJSON;
+
+        if (count > 0) {
+            notificationComing();
+        }
+
+        var wtf = $.ajax({
+            url: "<?= base_url() . '/admin/statistic'; ?>",
+            async: false,
+            dataType: 'json'
+        }).responseJSON;
+
         $("#summernote").summernote({
             tabsize: 2,
             height: 320,
-        });
+        })
 
-    
-
-
-        </script>
-
-        
-        <?php
-         if ($_SESSION['roles'] == 'admin') { ?>
-            
-
-            <script>
                // Enable pusher logging - don't include this in production
             Pusher.logToConsole = true;
 
@@ -173,13 +220,85 @@
 
             var channel = pusher.subscribe('my-channel');
             channel.bind('my-event', function(data) {
-            alert(JSON.stringify(data['message']));
+                notificationComing();
             });
-                </script>
 
-        <?php
+            function notificationRead() {
+            var el = $('#notification');
+            el.addClass('text-gray-600');
+            el.removeClass('text-primary');
+            $('#notification-badge').hide();
+            notifItem();
+            changeNotificationStatus();
         }
-        ?>
+
+        function notificationComing() {
+            var el = $('#notification');
+            el.addClass('text-primary');
+            el.removeClass('text-gray-600');
+            notifCount()
+            $('#notification-badge').show();
+        }
+
+        function notifCount() {
+            $.ajax({
+                url: '<?= base_url(); ?>/admin/notification-count',
+                type: 'GET',
+                async: true,
+                dataType: 'json',
+                success: function(data) {
+                    $('#notification-badge').text(data);
+                }
+            });
+        }
+
+        function changeNotificationStatus() {
+            $.ajax({
+                url: '<?= base_url(); ?>/admin/notification-status-change',
+                method: 'POST',
+                data: {
+                    status: true,
+                },
+                success: function() {
+                    console.log('success');
+                }
+            });
+        }
+
+        function notifItem() {
+            $.ajax({
+                url: '<?= base_url(); ?>/admin/notification-item',
+                type: 'GET',
+                async: true,
+                dataType: 'json',
+                success: function(data) {
+                    var html = '';
+                    var count = 1;
+                    var i;
+                    for (i = 0; i < data['data'].length; i++) {
+                        html += '<li class="dropdown-item notification-item">' +
+                            '<a class="d-flex align-items-center" href="#">' +
+                            '<div class="notification-icon">' +
+                            '<i class="bi bi-file-earmark-medical-fill"></i>' +
+                            '</div>' +
+                            '<div class="notification-text ms-4">' +
+                            '<p class="notification-title font-bold">' +
+                            data['data'][i].title +
+                            '</p>' +
+                            '<p class="notification-subtitle font-thin text-sm">' +
+                            data['data'][i].donors +
+                            '</p>' +
+                            '</div>' +
+                            '</a>' +
+                            '</li>';
+                    }
+                    $('.notifitem').html(html);
+                }
+
+            });
+        }
+    </script>
+            
 
     <?php if (session()->getFlashdata('pesan')) : ?>
         <script>

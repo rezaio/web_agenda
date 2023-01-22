@@ -73,6 +73,7 @@ class Article extends BaseController
             'id_users' => session()->get('id_users'),
             'id_categories' => $this->request->getPost('id_categories'),
             'status' => $roles == 'admin' ? 1 : 2,
+            'notification' => 1,
         ]);
 
         $options = array(
