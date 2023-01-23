@@ -115,7 +115,6 @@
             </div>
         </div>
 
-        <!-- nontifikasi -->
         <div id="main">
             <header class="mb-3">
                 <nav class="navbar navbar-expand navbar-light navbar-top p-0">
@@ -141,7 +140,7 @@
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end notification-dropdown" aria-labelledby="dropdownMenuButton">
                                         <li class="dropdown-header">
-                                            <h6>Notifikasi</h6>
+                                            <h6>Notifications</h6>
                                         </li>
                                         <div class="notifitem">
 
@@ -182,13 +181,6 @@
                         </div>
                     </div>
                 </nav>
-            </header>
-
-        <div id="main">
-            <header class="mb-3">
-                <a href="#" class="burger-btn d-block d-xl-none">
-                    <i class="bi bi-justify fs-3"></i>
-                </a>
             </header>
 
             <?= $this->renderSection('content'); ?>
