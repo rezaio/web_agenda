@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/pages/summernote.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/pages/sweetalert2.css">
     <link rel="shortcut icon" href="<?= base_url(); ?>/assets/img/logo/icon.png" type="image/png">
-    <link href="<?= base_url(); ?>/assets/img/icon.png" rel="icon">
+
 </head>
 
 <body>
@@ -120,6 +120,9 @@
             <header class="mb-3">
                 <nav class="navbar navbar-expand navbar-light navbar-top p-0">
                     <div class="container-fluid ps-0 pe-0">
+                        <a href="#" class="burger-btn d-block">
+                            <i class="bi bi-justify fs-3"></i>
+                        </a>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -151,6 +154,35 @@
                                     </ul>
                                 </li>
                             </ul>
+                            <div class="dropdown">
+                                <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="user-menu d-flex">
+                                        <div class="user-name text-end me-3">
+                                            <h6 class="mb-0 text-gray-600"><?= $user['name']; ?></h6>
+                                            <p class="mb-0 text-sm text-gray-600"><?= $user['roles']; ?></p>
+                                        </div>
+                                        <div class="user-img d-flex align-items-center">
+                                            <div class="avatar avatar-md">
+                                                <img src="<?= base_url(); ?>/assets/images/faces/1.jpg" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem">
+                                    <li>
+                                        <h6 class="dropdown-header">Hello, <?= $user['name']; ?></h6>
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item" href="<?= route_to('logout'); ?>"><i class="icon-mid bi bi-box-arrow-left me-2"></i>
+                                            Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
 
         <div id="main">
             <header class="mb-3">
