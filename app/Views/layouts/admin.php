@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/pages/summernote.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/pages/sweetalert2.css">
     <link rel="shortcut icon" href="<?= base_url(); ?>/assets/img/logo/icon.png" type="image/png">
-
+    <link href="<?= base_url(); ?>/assets/img/icon.png" rel="icon">
 </head>
 
 <body>
@@ -120,9 +120,6 @@
             <header class="mb-3">
                 <nav class="navbar navbar-expand navbar-light navbar-top p-0">
                     <div class="container-fluid ps-0 pe-0">
-                        <a href="#" class="burger-btn d-block">
-                            <i class="bi bi-justify fs-3"></i>
-                        </a>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -141,7 +138,7 @@
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end notification-dropdown" aria-labelledby="dropdownMenuButton">
                                         <li class="dropdown-header">
-                                            <h6>Notifications</h6>
+                                            <h6>Notifikasi</h6>
                                         </li>
                                         <div class="notifitem">
 
