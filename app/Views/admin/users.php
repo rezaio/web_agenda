@@ -84,6 +84,16 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="form-group has-icon-left">
+                            <label for="name">Nama Pj</label>
+                            <div class="position-relative">
+                                <input type="text" name="created_by" class="form-control" placeholder="Masukkan Username" id="username">
+                                <div class="form-control-icon">
+                                    <i class="bi bi-person-badge"></i>
+                                </div>
+                            </div>
+                        </div>
             
                     </div>
                     <div class="modal-footer">
@@ -230,6 +240,16 @@
                                 <input type="password" name="password" class="form-control" placeholder="Masukkan password" id="password">
                                 <div class="form-control-icon">
                                     <i class="bi bi-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group has-icon-left">
+                            <label for="name">Nama Pj</label>
+                            <div class="position-relative">
+                                <input value="<?= $user['created_by'] ?>" type="text" name="created_by" class="form-control" placeholder="Masukkan Username" id="username">
+                                <div class="form-control-icon">
+                                    <i class="bi bi-person-badge"></i>
                                 </div>
                             </div>
                         </div>

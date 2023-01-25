@@ -23,7 +23,7 @@ class Article extends BaseController
                 'user'  => $user->find(session()->get('id_users')),
                 'categories' => $category->findAll(),
                 'community' => $community->findAll(),
-                'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where('status', 1),
+                'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where('status', 1)->orderBy('date', 'desc'),
                 'articles' => $article->paginate(4, 'articles'),
                 'pager' => $article->pager
             ];
@@ -32,7 +32,7 @@ class Article extends BaseController
             $data = [
                 'user'  => $user->find(session()->get('id_users')),
                 'categories' => $category->findAll(),
-                'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where(['status' => 1, 'id_users' => session()->get('id_users')]),
+                'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where(['status' => 1, 'id_users' => session()->get('id_users')])->orderBy('date', 'desc'),
                 'articles' => $article->paginate(4, 'articles'),
                 'pager' => $article->pager
             ];

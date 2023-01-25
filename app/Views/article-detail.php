@@ -89,7 +89,7 @@
               <div class="post-information">
                 <h2><?= $article['title']; ?></h2>
                 <div class="entry-meta">
-                  <span class="author-meta"><i class="bi bi-person"></i> <?= $article['roles']; ?></span>
+                  <span class="author-meta"><i class="bi bi-person"></i>Created by <?= $article['created_by']; ?></span>
                   <span><i class="bi bi-clock"></i> <?= $article['date']; ?></span>
             
                   <span>

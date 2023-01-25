@@ -1,0 +1,101 @@
+ERROR - 2023-01-23 10:09:11 --> mysqli_sql_exception: Column 'id_articles' cannot be null in C:\xampp\htdocs\web_event-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\web_event-main\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `vi...', 0)
+#1 C:\xampp\htdocs\web_event-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `vi...')
+#2 C:\xampp\htdocs\web_event-main\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `vi...')
+#3 C:\xampp\htdocs\web_event-main\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `vi...', Array, false)
+#4 C:\xampp\htdocs\web_event-main\vendor\codeigniter4\framework\system\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\web_event-main\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\web_event-main\vendor\codeigniter4\framework\system\Model.php(729): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\web_event-main\vendor\codeigniter4\framework\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\web_event-main\app\Controllers\Home.php(80): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\web_event-main\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->detail('index.php')
+#10 C:\xampp\htdocs\web_event-main\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 C:\xampp\htdocs\web_event-main\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\web_event-main\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\web_event-main\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-01-23 10:09:11 --> Column 'id_articles' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `visitors` (`type`, `id_articles`) VALUES (:type:, :id_articles:)', [...], false)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(729): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Home.php(80): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->detail('FCPATH\\index.php')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 10:18:57 --> cURL error 6: Could not resolve host: api-ap1.pusher.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api-ap1.pusher.com/apps/1541690/events?auth_key=81fed0e008d5c25a0657&auth_timestamp=1674490737&auth_version=1.0&body_md5=edc6657a206fd78964d50cf2232316a3&auth_signature=931485130045be062f1f4d8d84f6146a6a71ebe75ecdab880118642584649a04
+in VENDORPATH\pusher\pusher-php-server\src\Pusher.php on line 782.
+ 1 VENDORPATH\pusher\pusher-php-server\src\Pusher.php(440): Pusher\Pusher->post('/apps/1541690/events', '{"name":"my-event","data":"{\\"message\\":\\"Ada Artikel Yang Harus di Verifikasi\\"}","channel":"my-channel"}')
+ 2 APPPATH\Controllers\Article.php(91): Pusher\Pusher->trigger('my-channel', 'my-event', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Article->save()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 10:20:07 --> cURL error 6: Could not resolve host: api-ap1.pusher.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api-ap1.pusher.com/apps/1541690/events?auth_key=81fed0e008d5c25a0657&auth_timestamp=1674490807&auth_version=1.0&body_md5=edc6657a206fd78964d50cf2232316a3&auth_signature=b5ec1852eb304de6a9654286943305fcf983baaca5e0f45f9d7d8c3ba018b20b
+in VENDORPATH\pusher\pusher-php-server\src\Pusher.php on line 782.
+ 1 VENDORPATH\pusher\pusher-php-server\src\Pusher.php(440): Pusher\Pusher->post('/apps/1541690/events', '{"name":"my-event","data":"{\\"message\\":\\"Ada Artikel Yang Harus di Verifikasi\\"}","channel":"my-channel"}')
+ 2 APPPATH\Controllers\Article.php(91): Pusher\Pusher->trigger('my-channel', 'my-event', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Article->save()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 10:20:12 --> cURL error 6: Could not resolve host: api-ap1.pusher.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api-ap1.pusher.com/apps/1541690/events?auth_key=81fed0e008d5c25a0657&auth_timestamp=1674490812&auth_version=1.0&body_md5=edc6657a206fd78964d50cf2232316a3&auth_signature=94d2b9f2621046cbeb76790467d6bde8c673e77ca2395ce72b737f95c95b88a0
+in VENDORPATH\pusher\pusher-php-server\src\Pusher.php on line 782.
+ 1 VENDORPATH\pusher\pusher-php-server\src\Pusher.php(440): Pusher\Pusher->post('/apps/1541690/events', '{"name":"my-event","data":"{\\"message\\":\\"Ada Artikel Yang Harus di Verifikasi\\"}","channel":"my-channel"}')
+ 2 APPPATH\Controllers\Article.php(91): Pusher\Pusher->trigger('my-channel', 'my-event', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Article->save()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 10:20:26 --> cURL error 6: Could not resolve host: api-ap1.pusher.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api-ap1.pusher.com/apps/1541690/events?auth_key=81fed0e008d5c25a0657&auth_timestamp=1674490826&auth_version=1.0&body_md5=edc6657a206fd78964d50cf2232316a3&auth_signature=f83f45efaf4bfa5dcc7e2de37433154ca04b5254b83ba25930e1ca15ad7cbd60
+in VENDORPATH\pusher\pusher-php-server\src\Pusher.php on line 782.
+ 1 VENDORPATH\pusher\pusher-php-server\src\Pusher.php(440): Pusher\Pusher->post('/apps/1541690/events', '{"name":"my-event","data":"{\\"message\\":\\"Ada Artikel Yang Harus di Verifikasi\\"}","channel":"my-channel"}')
+ 2 APPPATH\Controllers\Article.php(91): Pusher\Pusher->trigger('my-channel', 'my-event', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Article->save()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 10:24:41 --> cURL error 6: Could not resolve host: api-ap1.pusher.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api-ap1.pusher.com/apps/1541690/events?auth_key=81fed0e008d5c25a0657&auth_timestamp=1674491081&auth_version=1.0&body_md5=edc6657a206fd78964d50cf2232316a3&auth_signature=958f9a23fa874abbb0180e275938e4e5e382ecd4b5e8c33e85b02c08200f9110
+in VENDORPATH\pusher\pusher-php-server\src\Pusher.php on line 782.
+ 1 VENDORPATH\pusher\pusher-php-server\src\Pusher.php(440): Pusher\Pusher->post('/apps/1541690/events', '{"name":"my-event","data":"{\\"message\\":\\"Ada Artikel Yang Harus di Verifikasi\\"}","channel":"my-channel"}')
+ 2 APPPATH\Controllers\Article.php(91): Pusher\Pusher->trigger('my-channel', 'my-event', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Article->save()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 11:43:27 --> unlink(img/dafault.jpg): No such file or directory
+in APPPATH\Controllers\Article.php on line 102.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(img/dafault.jpg): No such file or directory', 'APPPATH\\Controllers\\Article.php', 102, [...])
+ 2 APPPATH\Controllers\Article.php(102): unlink('img/dafault.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Article->delete()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 11:43:48 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Article.php on line 101.
+ 1 APPPATH\Controllers\Article.php(101): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Article.php', 101, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Article->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 22:15:42 --> cURL error 6: Could not resolve host: api-ap1.pusher.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api-ap1.pusher.com/apps/1541690/events?auth_key=81fed0e008d5c25a0657&auth_timestamp=1674533742&auth_version=1.0&body_md5=edc6657a206fd78964d50cf2232316a3&auth_signature=0ad95d3e6828324f6f15b609270b44e9a3b594c4241c7421aa63bb8d5c6299ad
+in VENDORPATH\pusher\pusher-php-server\src\Pusher.php on line 782.
+ 1 VENDORPATH\pusher\pusher-php-server\src\Pusher.php(440): Pusher\Pusher->post('/apps/1541690/events', '{"name":"my-event","data":"{\\"message\\":\\"Ada Artikel Yang Harus di Verifikasi\\"}","channel":"my-channel"}')
+ 2 APPPATH\Controllers\Article.php(91): Pusher\Pusher->trigger('my-channel', 'my-event', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Article->save()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

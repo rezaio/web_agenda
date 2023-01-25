@@ -52,7 +52,8 @@ Filter Artikel
                                         <span class="badge bg-light-danger mx-2">Kategori tidak ditemukan</span>
                                     <?php } else { ?>
                                         <span class="badge bg-light-primary mx-2"><?= $article['name']; ?></span>
-                                    <?php } ?>
+                                        <?php } ?>
+                                        <span class="badge bg-light-primary mx-2"><?= $article['date']; ?></span>
                                 </div>
                             </div>
                         </div>

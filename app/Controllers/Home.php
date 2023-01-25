@@ -44,7 +44,7 @@ class Home extends BaseController
         $category = new CategoriesModel();
         $data = [
             'categories' => $category->findAll(),
-            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where('status', 1)->orderBy('date', 'desc')->findAll(),
+            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where('status', 1)->orderBy('date', 'desc'),
             'articles' => $article->paginate(2, 'articles'),
             'pager' => $article->pager
         ];
@@ -79,6 +79,7 @@ class Home extends BaseController
             'type' => 2,
             'id_articles' => $article->select('id_articles')->where('slug', $slug)->first()
         ]);
+        // var_dump($data['user']);
         return view('article-detail', $data);
     }
 

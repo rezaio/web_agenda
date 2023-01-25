@@ -14,8 +14,9 @@
         <div class="carousel-item active" style="background-image: url('assets/img/header/k1.jpg')">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="">Selamat Datang Di Website</h2>
-              <p class="">Agenda Ormawa Dan UKM Politeknik Negeri Lampung</p>
+            <h2 class="">Selamat Datang Di Website</h2>
+              <p class="">Agenda Ormawa Dan UKM </p>
+                <h2 class=""> Politeknik Negeri Lampung</h2>
 
             </div>
           </div>
@@ -23,8 +24,9 @@
         <div class="carousel-item active" style="background-image: url('assets/img/header/k2.jpg')">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="">Selamat Datang Di Website</h2>
-              <p class="">Agenda Ormawa Dan UKM Politeknik Negeri Lampung</p>
+            <h2 class="">Selamat Datang Di Website</h2>
+              <p class="">Agenda Ormawa Dan UKM </p>
+                <h2 class=""> Politeknik Negeri Lampung</h2>
 
             </div>
           </div>
@@ -33,7 +35,19 @@
           <div class="carousel-container">
             <div class="container">
               <h2 class="">Selamat Datang Di Website</h2>
-              <p class="">Agenda Ormawa Dan UKM Politeknik Negeri Lampung</p>
+              <p class="">Agenda Ormawa Dan UKM </p>
+                <h2 class=""> Politeknik Negeri Lampung</h2>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item active" style="background-image: url('assets/img/header/sk2.png')">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="">Selamat Datang Di Website</h2>
+              <p class="">Agenda Ormawa Dan UKM </p>
+                <h2 class=""> Politeknik Negeri Lampung</h2>
 
             </div>
           </div>
@@ -95,7 +109,7 @@
                   </h4>
                   <p>
                     <?php
-                    print(truncateString($article['description'], 100, true) . "\n");
+                    print(truncateString($article['description'], 40, true) . "\n");
                     ?>
                   </p>
                 </div>
